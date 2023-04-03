@@ -1,0 +1,14 @@
+.back {
+  text-align: center;
+}
+
+.playCoin {
+  padding: 10px;
+  font-size: 12pt;
+  border: none;
+  background-color: rgb(0, 183, 255);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.7s;
+}
