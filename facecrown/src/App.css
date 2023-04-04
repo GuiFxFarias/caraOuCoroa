@@ -1,8 +1,13 @@
 .back {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .playCoin {
+  width: 20%;
   padding: 10px;
   font-size: 12pt;
   border: none;
@@ -11,4 +16,38 @@
   font-weight: bold;
   cursor: pointer;
   transition: 0.7s;
+  margin-bottom: 1em;
+}
+
+@keyframes rotateCoin {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes upCoin {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+.back img {
+  width: 10%;
+  animation: rotateCoin 5s linear infinite;
+  animation: upCoin 5s linear infinite;
+}
+
+.coin {
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
