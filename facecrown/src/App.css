@@ -41,8 +41,10 @@
 
 .back img {
   width: 10%;
-  animation: rotateCoin 5s linear infinite;
-  animation: upCoin 5s linear infinite;
+}
+
+.rotate{
+  animation: rotateCoin 1s linear infinite;
 }
 
 .coin {
@@ -50,4 +52,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+
+.coin .up {
+  animation: upCoin 1.5s linear infinite;
 }

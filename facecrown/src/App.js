@@ -4,9 +4,20 @@ import coin from "./assets/coin.png";
 
 function App() {
   const [played, setPlayed] = useState(false);
+  const [up, setUp] = useState("");
+  const [rotate, setRotate] = useState("");
 
   function playCons() {
     setPlayed(!played);
+
+    if (played === true) {
+      setRotate("rotate");
+      setUp("up");
+    } else {
+      setUp("");
+      setRotate("");
+    }
+    
   }
 
   return (
@@ -17,7 +28,9 @@ function App() {
           Jogar Moeda
         </button>
         <div className="coin">
-          <img src={coin} alt="Moeda" />
+          <div className={up}>
+            <img className={rotate} src={coin} alt="Moeda" />
+          </div>
         </div>
       </div>
     </>
